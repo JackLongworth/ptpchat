@@ -23,6 +23,6 @@
 
 
 // definitions
-#define _WIN32_WINNT 0x0600 
 #define WM_SOCKET (WM_USER + 1)
 #define WM_APPEND_TEXT (WM_USER + 2)
+#define WM_USER_HOST_IP_INPUT (WM_USER + 3)

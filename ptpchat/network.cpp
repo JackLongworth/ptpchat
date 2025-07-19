@@ -35,7 +35,7 @@ int Network::BroadcastMessage(std::string* message) {
 	std::vector<Client> clients = Network::server->clients.snapshot();
 
 	for (Client client : clients) {
-		send(client.socket, message->c_str(), message->size(), 0);
+		send(client.socket, message->c_str(), static_cast<int>(message->size()), 0);
 	}
 	
 	return 0;

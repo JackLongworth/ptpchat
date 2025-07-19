@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include "user_send_textbox.h"
 #include "chatbox.h"
+#include "join_dialog.h"
 #include "network.h"
 
 #define MAX_LOADSTRING 100
@@ -148,23 +149,34 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         gUserSendTextBox = new UserSendTextbox(hWnd, ((LPCREATESTRUCT)lParam)->hInstance, (HMENU) IDC_USER_SEND_TEXTBOX);
 
         break;
+
+    case WM_USER_HOST_IP_INPUT: {
+        std::string* ipInput = reinterpret_cast<std::string*>(lParam);
+
+        PostMessage(gChatbox->handle, WM_APPEND_TEXT, 0, reinterpret_cast<LPARAM>(ipInput));
+        break;
+    }
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
             // Parse the menu selections:
             switch (wmId)
             {
-            case ID_FILE_HOST:
-                Network::StartupServer(gChatbox);
-                break;
-            case IDM_ABOUT:
-                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
-                break;
-            case IDM_EXIT:
-                DestroyWindow(hWnd);
-                break;
-            default:
-                return DefWindowProc(hWnd, message, wParam, lParam);
+                case ID_FILE_HOST:
+                    Network::StartupServer(gChatbox);
+                    break;
+                case ID_FILE_JOIN: {
+                    JoinDialog joinDialog(hInst, hWnd);
+                    break;
+                }
+                case IDM_ABOUT:
+                    DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                    break;
+                case IDM_EXIT:
+                    DestroyWindow(hWnd);
+                    break;
+                default:
+                    return DefWindowProc(hWnd, message, wParam, lParam);
             }
         }
         break;

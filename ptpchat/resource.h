@@ -11,10 +11,12 @@
 #define IDI_PTPCHAT                     107
 #define IDI_SMALL                       108
 #define IDC_PTPCHAT                     109
+#define IDC_EDIT						110
 #define IDR_MAINFRAME                   128
 #define IDC_USER_SEND_TEXTBOX           1001
 #define ID_FILE_JOIN                    32771
 #define ID_FILE_HOST                    32772
+#define IDD_JOIN_DIALOG					32773
 #define IDC_STATIC                      -1
 
 // Next default values for new objects

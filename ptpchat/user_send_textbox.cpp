@@ -4,8 +4,6 @@
 WNDPROC UserSendTextbox::defaultProc = nullptr;
 
 UserSendTextbox::UserSendTextbox(HWND parentWindow, HINSTANCE parentInstance, HMENU controlId)  {
-    //, std::function<void(char*)> onEnter
-
 
     this->handle = CreateWindowEx(
         WS_EX_CLIENTEDGE, "EDIT", "",

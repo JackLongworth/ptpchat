@@ -77,6 +77,7 @@
       <PreprocessorDefinitions>
       </PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -95,6 +96,7 @@
       <PreprocessorDefinitions>
       </PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -113,6 +115,7 @@
       <PreprocessorDefinitions>
       </PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -131,6 +134,7 @@
       <PreprocessorDefinitions>
       </PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -146,6 +150,7 @@
     <ClInclude Include="chatbox.h" />
     <ClInclude Include="client.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="join_dialog.h" />
     <ClInclude Include="network.h" />
     <ClInclude Include="ptpchat.h" />
     <ClInclude Include="Resource.h" />
@@ -156,6 +161,7 @@
   <ItemGroup>
     <ClCompile Include="chatbox.cpp" />
     <ClCompile Include="client_list.h" />
+    <ClCompile Include="join_dialog.cpp" />
     <ClCompile Include="network.cpp" />
     <ClCompile Include="ptpchat.cpp" />
     <ClCompile Include="server.cpp" />

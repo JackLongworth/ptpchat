@@ -5,12 +5,20 @@
 #include "chatbox.h"
 #include "client_list.h"
 #include "client.h"
+#include <string.h>
 #include <vector>
 #include <map>
+#include "nlohmann/json.hpp"
+
+using json = nlohmann::json;
 
 #define DEFAULT_PORT "27015"
 #define MAX_CLIENTS 4
 
+typedef struct Host {
+	SOCKET socket;
+	WSAEVENT event;
+} Host;
 
 class Server
 {
@@ -20,15 +28,14 @@ public:
 	int Start();
 
 private:
-	static DWORD WINAPI HandleIncomingClients(LPVOID lpParam);
+	static int getRemoteIPFromSocket(SOCKET socket, char* ipStr, int ipStrLen);
+	static DWORD WINAPI HandleNewConnections(LPVOID lpParam);
+	static DWORD WINAPI HandleIncomingMessages(LPVOID lpParam);
 
 public:
 	ClientList clients;
-
 private:
-	SOCKET listener;
-
+	Host host;
 	Chatbox* chatbox;
-	
 };
 

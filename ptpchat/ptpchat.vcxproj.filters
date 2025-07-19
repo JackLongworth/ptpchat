@@ -48,11 +48,14 @@
     <ClInclude Include="network.h">
       <Filter>Header Files\Network</Filter>
     </ClInclude>
-    <ClInclude Include="server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="client.h">
       <Filter>Header Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="server.h">
+      <Filter>Header Files\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="join_dialog.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="client_list.h">
       <Filter>Header Files\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="join_dialog.cpp">
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
