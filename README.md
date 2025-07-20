@@ -12,9 +12,9 @@ The idea is that each user just initialises their local session then all going w
 I do see the possibility of certain users not being able to connect to each other whilst being able to connect to others, it may be funny to just allow users who are able to still comminicate. If you can't connect to a certain member/s of the room then you just can't see their messages. 
 
 Upcoming Features:
-  = Usernames
-  = Symmetric encryption
-  = Some colour?
-  = A member list on the right hand side
-  = Ability to kick members?
+  - Usernames
+  - Symmetric encryption
+  - Some colour?
+  - A member list on the right hand side
+  - Ability to kick members?
 
