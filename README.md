@@ -4,7 +4,7 @@ This is a project to develop a winsock2/win32 application that can enable peer t
 
 Will be fun to implement Symmetrical encryption so I will have to give friends a key irl if we want to do encrypted chatting.
 
-The model atm is to have a host who hosts a session, other users can then join this session.
+The model atm is to have a host who hosts a session, other users can then join this session, the host is just responsible for adding new users into the session. (If people disconnect then this can be handled by each individual peer and the host doesn't need to deal with that).
 
 Any new member will get a list of ips for the other users already in the session (so they can connect individually to everyone).
 The idea is that each user just initialises their local session then all going well everyone should be in sync.
